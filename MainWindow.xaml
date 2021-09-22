@@ -1,0 +1,59 @@
+﻿<Window x:Class="RegistroUsuarios.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroUsuarios"
+        mc:Ignorable="d"
+        Title="Menu Principal" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Menu Height="30" FontSize="18">
+                <MenuItem Header="Registros" >
+                    <MenuItem x:Name="UsuariosMenuItem" Header="Registro usuarios" Click="UsuariosMenuItem_Click" />
+                    <MenuItem x:Name="RolesMenuItem" Header="Registro Roles" Click="RolesMenuItem_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Consultas">
+                    <MenuItem x:Name="ConsultaUsuariosMenuItem" Header="Consulta Usuarios" Click="ConsultaUsuariosMenuItem_Click"/>
+                    <MenuItem x:Name="ConsultaRolesMenuItem" Header="Consulta Roles" Click="ConsultaRolesMenuItem_Click"/>
+                </MenuItem>
+
+                <MenuItem Header="Ayuda">
+                    <Menu/>
+                </MenuItem>
+            </Menu>
+
+        </StackPanel>
+
+        <Button x:Name="UsuarioButton" Click="UsuarioButton_Click" Margin="127,123,513,258" >
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="/Resources/user1.png"  />
+                <Label Content="Registro Usuario" />
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="CRolesButton" Margin="496,289,144,94" Click="CRolesButton_Click" >
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="/Resources/Consulta.png"  />
+                <Label Content="Consulta Roles" />
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="RolesButton" Margin="496,123,144,258" Click="RolesButton_Click" >
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="/Resources/Roles.png"  />
+                <Label Content="Registro Roles" Width="89" />
+            </StackPanel>
+        </Button>
+
+        <Button x:Name="CUsuarioButton" Margin="127,289,513,94" Click="CUsuarioButton_Click" >
+            <StackPanel Orientation="Horizontal" >
+                <Image Source="/Resources/Consulta.png"  />
+                <Label Content="Consulta Usuarios" />
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+</Window>

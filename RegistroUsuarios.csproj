@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <StartWorkingDirectory>$(MSBuildProjectDirectory)</StartWorkingDirectory>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Consulta.png" />
+    <None Remove="Resources\delete.png" />
+    <None Remove="Resources\Edit.png" />
+    <None Remove="Resources\New.png" />
+    <None Remove="Resources\Roles.png" />
+    <None Remove="Resources\SaveAdd.png" />
+    <None Remove="Resources\user.ico" />
+    <None Remove="Resources\User1.png" />
+    <None Remove="Resources\user_add.ico" />
+    <None Remove="Resources\user_delete.ico" />
+    <None Remove="Resources\user_edit.ico" />
+    <None Remove="Resources\zoom.ico" />
+    <None Remove="Resources\zoom1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DATA\" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SQLite" Version="5.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Consulta.png" />
+    <Resource Include="Resources\delete.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Edit.png" />
+    <Resource Include="Resources\New.png" />
+    <Resource Include="Resources\Roles.png" />
+    <Resource Include="Resources\SaveAdd.png" />
+    <Resource Include="Resources\user.ico" />
+    <Resource Include="Resources\User1.png" />
+    <Resource Include="Resources\user_add.ico" />
+    <Resource Include="Resources\user_delete.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\user_edit.ico" />
+    <Resource Include="Resources\zoom.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\zoom1.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DATA\BDUsuarios.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
